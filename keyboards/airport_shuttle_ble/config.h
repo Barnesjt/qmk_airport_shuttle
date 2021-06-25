@@ -19,16 +19,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CONFIG_H
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x0000
+#define VENDOR_ID       0xADAD
+#define PRODUCT_ID      0xA154
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Aeternus Decorum
-#define PRODUCT         Paw BLE
-#define DESCRIPTION     4 key macropad
+#define PRODUCT         Airport Shuttle
 
 /* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 4
+#define MATRIX_ROWS 4
+#define MATRIX_COLS 12
 
 /* COL2ROW, ROW2COL, or CUSTOM_MATRIX */
 #define DIODE_DIRECTION COL2ROW
@@ -54,10 +53,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BLE_NUS_MAX_INTERVAL 60 // default 75
 #define BLE_HID_MAX_INTERVAL 80 // default 90
 #define BLE_HID_SLAVE_LATENCY 10 // default 4
-
-#define PROGMEM // arm-gcc does not interpret PROGMEM
-#define RGB_DI_PIN GPIO(0,22)     // The pin the LED strip is connected to
-#define RGBLED_NUM 4
 
 /*
  * Feature disable options

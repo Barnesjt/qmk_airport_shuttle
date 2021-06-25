@@ -1,5 +1,5 @@
 
-DEFAULT_FOLDER = paw_ble/rev1
+DEFAULT_FOLDER = airport_shuttle_ble/rev1
 
 NRF_DEBUG = no
 
@@ -11,10 +11,6 @@ SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
 NKRO_ENABLE = no	    # USB Nkey Rollover
 CUSTOM_MATRIX = yes # This flag should be on for nrf52
 TAP_DANCE_ENABLE = no
-RGBLIGHT_ENABLE = yes
-
-LED_UNDERGLOW_ENABLE = yes  # LED underglow (Enable WS2812 RGB underlight.)
-LED_ANIMATIONS = yes        # LED animations
 
 ## chip/board settings
 MCU_FAMILY = NRF52

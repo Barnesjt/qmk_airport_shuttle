@@ -1,5 +1,5 @@
 
-RGBLIGHT_ENABLE = yes
+RGBLIGHT_ENABLE = no
 
 # it should exist either in <this_dir>/ld/
 MCU_LDSCRIPT = nrf52840
