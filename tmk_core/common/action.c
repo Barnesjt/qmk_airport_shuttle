@@ -44,6 +44,14 @@ int retro_tapping_counter = 0;
 #include <fauxclicky.h>
 #endif
 
+#ifndef TAP_CODE_DELAY
+#    define TAP_CODE_DELAY 0
+#endif
+
+#ifndef TAP_HOLD_CAPS_DELAY
+#    define TAP_HOLD_CAPS_DELAY 80
+#endif
+
 /** \brief Called to execute an action.
  *
  * FIXME: Needs documentation.
@@ -773,6 +781,16 @@ void register_code(uint8_t code)
     else if IS_CONSUMER(code) {
         host_consumer_send(KEYCODE2CONSUMER(code));
     }
+}
+
+void tap_code(uint8_t code) {
+  tap_code_delay(code, code == KC_CAPS ? TAP_HOLD_CAPS_DELAY : TAP_CODE_DELAY);
+}
+
+void tap_code_delay(uint8_t code, uint16_t delay) {
+  register_code(code);
+  wait_ms(delay);
+  unregister_code(code);
 }
 
 /** \brief Utilities for actions. (FIXME: Needs better description)
