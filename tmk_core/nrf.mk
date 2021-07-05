@@ -25,7 +25,7 @@
 
 # Imported source files and paths
 ifeq ($(wildcard $(NRFSDK_ROOT)), "")
-  $(error no nrf NRFSDK was found. Please set NRFNRFSDK_ROOT in your rules.mk)
+  $(error no nrf NRFSDK was found. Please set NRFSDK_ROOT in your rules.mk)
 else
   NRFSDK_ROOT := $(strip $(NRFSDK_ROOT))
 endif
